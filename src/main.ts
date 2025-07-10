@@ -5,39 +5,41 @@
 
 // Requisitos da entrega:
 // 1. Criar um array de números. ✅
-// 2. Criar uma função para exibir o array e seu tamanho. ❌
-// 3. Adicionar elementos 60 e 70 ao array. ❌
-// 4. Exibir o array usando a função mostrarArray. ❌
-// 5. Remover o último elemento do array usando o método pop. ❌
-// 6. Exibir o array usando a função mostrarArray. ❌
-// 7. Mostrar o elemento excluído. ❌
-// 8. Mostrar cada elemento do array em uma linha usando o método forEach. ❌
-// 9. Criar um novo array com os valores dobrados usando o método map. ❌
+// 2. Criar uma função para exibir o array e seu tamanho. ✅
+// 3. Adicionar elementos 60 e 70 ao array. ✅
+// 4. Exibir o array usando a função mostrarArray. ✅
+// 5. Remover o último elemento do array usando o método pop. ✅
+// 6. Exibir o array usando a função mostrarArray. ✅
+// 7. Mostrar o elemento excluído. ✅
+// 8. Mostrar cada elemento do array em uma linha usando o método forEach. ✅
+// 9. Criar um novo array com os valores dobrados usando o método map. ✅
 // 10. Calcular a soma de todos os elementos do array usando o método reduce. ❌
 
 const numeros: number[] = [10, 20, 30, 40, 50];
 
 function mostrarArray(array: number[]): void {
     console.log('--------------------------------');
-    console.log(`Tamanho: `);
-    console.log(`Array: `);
+    console.log(`Tamanho: ${array.length}`);
+    console.log(`Array: ${array}`);
 }
+
+numeros.push(60);
+numeros.push(70);
+
 mostrarArray(numeros);
 
-
-
-
-
-const elementoExcluido = ;
+const elementoExcluido = numeros.pop();
 mostrarArray(numeros);
 console.log(`Elemento excluído: ${elementoExcluido}`);
 
-numeros.forEach();
+numeros.forEach( (elemento: number, index: number): void => console.log(elemento));
 
-const dobrados = numeros.map();
+const dobro = (valor: number) => 2*valor;
+
+const dobrados: number[] = numeros.map(dobro);
 mostrarArray(dobrados);
 
-const soma = numeros.reduce();
+const soma = numeros.reduce((previousValue: number, currentValue: number, index: number): number => previousValue + currentValue );
 console.log(`Soma dos elementos do array: ${soma}`);
 
 // para rodar o código, use o comando:
